@@ -23,10 +23,8 @@ public class Exercise22 {
   }
 
   public static void printElementsAndIndex(List<String> customList) {
-    int i = 0;
     for (String s : customList) {
-      System.out.println(i + " " + s);
-      i++;
+      System.out.println(customList.indexOf(s) + " " + s);
     }
   }
 
@@ -35,6 +33,8 @@ public class Exercise22 {
   }
 
   public static void main(String[] args) {
-    printElementsAndIndex(createArrayList());
+    List<String> list = createArrayList();
+    addElementToList(list, "AAAAA");
+    printElementsAndIndex(list);
   }
 }
